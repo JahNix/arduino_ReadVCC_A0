@@ -1,6 +1,6 @@
 
-/* Basic Script for the Arduino to read voltage and initiate
- * a Shutdown to the RPi based on voltage found.
+/*  Basic Script for the Arduino to read voltage and initiate
+ *  a Shutdown to the RPi based on voltage found.
  *  
  *  While we could do this on the base RPi, we can use the
  *  Low-Power arduino for other LowLevel functions like
@@ -19,6 +19,7 @@ void setup(){
 }
 
 void loop(){
+ 
     int vcc_value;
     float vcc_volt;
 
@@ -46,5 +47,7 @@ void loop(){
       analogWrite( lvc_pin, 0 );
       Serial.println( "Full Battery - AOK!" );
     }
+ 
     delay( 5000 );
+ 
 }
